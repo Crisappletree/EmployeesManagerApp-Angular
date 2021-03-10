@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "employeesmanager-f83e6": {
+      "hosting": {
+        "angularcrud": [
+          "employeesmanager-f83e6"
+        ]
+      }
+    }
+  }
+}
