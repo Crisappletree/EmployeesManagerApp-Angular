@@ -8,21 +8,37 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Generate Component, run on terminal
+    - `ng g c shared/components/[componentname] --module app` 
+    - `ng g m shared/components/[componentname] --module app` 
 
-## Build
+- Generate Module with route
+    - `ng g m pages/[foldername]/[modulename] --module app -- route [routename]`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Generate Service
+    - `ng g s pages/[foldername]/[servicename]`
 
-## Running unit tests
+## Bootstrap and BootsWatch
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Run on terminal `npm i bootswatch bootstrap jquery @popperjs/core`
 
-## Running end-to-end tests
+- Add the next lines to `styles.css` file and replace `[theme]` for the theme you want to use.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    - @import "~bootswatch/dist/[theme]/variables";
+    -    @import "~bootstrap/scss/bootstrap";
+    -    @import "~bootswatch/dist/[theme]/bootswatch";
 
-## Further help
+- Add to `angular.json` in `"scripts":[]` the next importations
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# EmployeesManagerApp-Angular
+    - `"node_modules/jquery/dist/jquery.min.js",`
+    - `"node_modules/@popperjs/core/dist/umd/popper.min.js",`
+    - `"node_modules/bootstrap/dist/js/bootstrap.min.js"`
+
+
+## Add routes
+
+- Adding routes to an `<li><a></a></li> label`  with `[routerLink]="['/....']"`
+
+### bind data
+
+`[(ngModel)]="variable you want to bind"`
